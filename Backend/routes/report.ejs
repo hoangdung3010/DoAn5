@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <style>
+            table{
+                font-family: arial, sans-serif;
+                border-collapse: collapse;
+                width: 100%;
+
+            }
+            td,th{
+                border: 1px solid #dddddd;
+                text-align: left;
+                padding: 8px;
+            }
+        </style>
+    </head>
+    <body>
+        <h3 style="text-align: center;">Hệ thống quản lý nhân sự</h3>
+        <table>
+            <tr>
+                <th>Tên: <%= name %></th>
+                <th>Email: <%= email %></th>
+            </tr>
+            <tr>
+                <th>Liên hệ: <%= contactNumber %></th>
+                <th>Phương thức thanh toán: <%= paymentMethod %></th>
+            </tr>
+        </table>
+        <h3>Thông tin chi tiết: </h3>
+        <table>
+            <tr>
+                <th>Tên: </th>
+                <th>Phòng ban: </th>
+                <th>Số ngày công: </th>
+                <th>Lương: </th>
+                <th>Tổng: </th>
+            </tr>
+            <% if(employeeDetails.length > 0){%>
+                <% employeeDetails.forEach(employee =>{ %>
+                    <tr>
+                        <td><%= employee.name %></td>
+                        <td><%= employee.department %></td>
+                        <td><%= employee.day %></td>
+                        <td><%= employee.salary %></td>
+                        <td><%= employee.total %></td>
+                    </tr>
+                    <%});%>
+                    <%}%>
+        </table>
+        <h3>Tổng: <%= totalAmount %></h3>
+        <h3>Chào tháng mới đầy nhiệt huyết!</h3>
+    </body>
+</html>

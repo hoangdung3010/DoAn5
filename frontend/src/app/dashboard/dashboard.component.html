@@ -1,0 +1,37 @@
+<body>
+    <mat-card>
+        <b><span>Bảng chung</span></b>
+    </mat-card>
+    <br>
+    <div class="row">
+        <div class="column">
+            <div class="card">
+                <div class="container">
+                    <h2 class="title">Số phòng ban: </h2>
+                    <h1 class="title">{{data?.department}}</h1>
+                    <p><button class="button"[routerLink]="['/ems/department']">Xem chi tiết</button></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="card">
+                <div class="container">
+                    <h2 class="title">Số nhân viên: </h2>
+                    <h1 class="title">{{data?.employee}}</h1>
+                    <p><button class="button"[routerLink]="['/ems/employee']">Xem chi tiết</button></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="card">
+                <div class="container">
+                    <h2 class="title">Số HĐ đã duyệt : </h2>
+                    <h1 class="title">{{data?.contract}}</h1>
+                    <p><button class="button"[routerLink]="['/ems/contract']">Xem chi tiết</button></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
